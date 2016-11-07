@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ninja Gold</title>
+	<script type = 'text/javascript'></script>
+</head>
+<body>
+	<div>
+		<h2>Your Gold: {{session['gold']}}</h2>
+		<div class = 'boxes'>
+			<h3>Farm</h3>
+			<h4>(earns 10-20 golds)</h4>
+			<form action ='/process_money' method='post'>
+				<input type="hidden" name='location' value='farm'>
+				<input type ="submit" value ="Find Gold">
+			</form>
+		</div>
+		<div class = 'boxes'>
+			<h3>Cave</h3>
+			<h4>(earns 5-10 golds)</h4>
+			<form action ='/process_money' method='post'>
+				<input type="hidden" name='location' value='cave'>
+				<input type ="submit" value ="Find Gold">
+			</form>
+		</div>
+		<div class = 'boxes'>
+			<h3>House</h3>
+			<h4>(earns 2-5 golds)</h4>
+			<form action ='/process_money' method='post'>
+				<input type="hidden" name='location' value='house'>
+				<input type ="submit" value ="Find Gold">
+			</form>
+		</div>
+		<div class = 'boxes'>
+			<h3>Casino</h3>
+			<h4>(earns/takes 0-50 golds)</h4>
+			<form action ='/process_money' method='post'>
+				<input type="hidden" name='location' value='casino'>
+				<input type ="submit" value ="Find Gold">
+			</form>
+		</div>
+		<div id ='update'>
+			You are entering {{data['location']}}
+
+</body>
+</html>
+	
